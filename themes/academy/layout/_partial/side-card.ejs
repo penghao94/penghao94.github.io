@@ -17,14 +17,14 @@
                     <% for( var i in theme.social_links){ %>
 
                         <% if(theme.social_links[i].url= null || theme.social_links[i].url== undefined || theme.social_links[i].url== ''){ %>
-                            <li >
+                            <li  class="text-center">
                                   <%= theme.social_links[i].text %>
                             </li>
                         
                          <% }else{ %>
                                <li>
                                 <span class="<%= theme.social_links[i].icon  %>"></span>   
-                                   <a href="<%- url_for(theme.social_links[i].url) %>" >
+                                   <a  class="text-center" href="<%- url_for(theme.social_links[i].url) %>" >
                                         <%= theme.social_links[i].text %>
                                 </a>
                                 </li>
