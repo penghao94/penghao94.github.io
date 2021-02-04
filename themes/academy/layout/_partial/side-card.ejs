@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <img class="img-fluid img-thumbnail rounded-circle" src="<%- url_for(theme.avatar) %>" alt="avatar">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10 offset-md-1">
+            <h4 class="text-center"><%= theme.autor||config.author %> </h4>
+            <p class ="text-center"><%= theme.author_career %></br> <%= theme.author_bio %></p>
+        </div>
+    </div>
+    <% if(theme.social.enable){ %> 
+        <div class="row">
+            <div class="col-md-10 offset-md-1">
+                <ul class="list-unstyled">
+                    <% for( var i in theme.social_links){ %>
+
+                        <% if(theme.social_links[i].url= null || theme.social_links[i].url== undefined || theme.social_links[i].url== ''){ %>
+                            <li >
+                                <span class="<%= theme.social_links[i].icon  %>"></span>   <%= theme.social_links[i].text %>
+                            </li>
+                        
+                         <% }else{ %>
+                               <li>
+                                <span class="<%= theme.social_links[i].icon  %>"></span>   
+                                   <a href="<%- url_for(theme.social_links[i].url) %>" >
+                                        <%= theme.social_links[i].text %>
+                                </a>
+                                </li>
+                        <% } %> 
+                    
+                    <% } %>  
+                </ul>
+            </div>
+            
+        </div>
+    <% } %>
+    
+</div>

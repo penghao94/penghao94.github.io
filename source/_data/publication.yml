@@ -1,0 +1,25 @@
+Fabricable Unobtrusive 3D‐QR‐Codes with Directional Light:
+  view: card
+  img: /img/qr_direction.png
+  conference: SGP 2020
+  bibtex: source/biblio/qr_direction.bib
+  paper: http://irc.cs.sdu.edu.cn/DirectQR/resources/DirectionalQR.pdf
+  external_link: http://irc.cs.sdu.edu.cn/DirectQR/index.html
+  video: https://youtu.be/WDvNqdh43g4
+
+Fabricating QR codes on 3D objects using self-shadows:
+  view: card
+  img: /img/qr_ambient.png
+  bibtex: source/biblio/qr_ambient.bib
+  conference: SPM 2019
+  paper: http://cfcs.pku.edu.cn/baoquan/docs/2019-06/20190610093546503775.pdf
+  video: https://www.dropbox.com/s/gflsgess1o2d94o/Fabricating%20QR%20Codes%20on%203D%20Objects%20using%20Self-shadows.mp4?dl=0
+Constrained Stacking in DLP 3D Printing:
+  view: plain
+  bibtex: source/biblio/dlp_stacking.bib
+  paper: https://www.dropbox.com/s/rqr56usa4z50x0j/DLP_stacking.pdf?dl=0
+  
+3D printed perforated QR codes:
+  view: plain
+  bibtex: source/biblio/qr_2d.bib
+  paper: https://www.researchgate.net/profile/Hao_Peng34/publication/332927905_3D_printed_perforated_QR_codes/links/5f17ab3f92851cd5fa3bed4f/3D-printed-perforated-QR-codes.pdf

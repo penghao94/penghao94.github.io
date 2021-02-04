@@ -1,0 +1,48 @@
+<% for(var i in site.data.publication){ %>
+    <% var item=site.data.publication[i];%> 
+    <% if(item.view == 'card'){ %>
+        <%var cite_obj= citation(item.bibtex,item.view) %> 
+        <div class="card mb-3 border-top-0 border-right-0 border-left-0 pb-3 rounded-0" >
+            <div class="row no-gutters  ">
+                <div class="col-md-3">
+                  <img src="<%- url_for(item.img) %>"  class="card-img" alt="...">
+                </div>
+                <div class="col-md-9 ">
+                  <div class="card-body border-0  my-0  py-0">
+                    <h5 class="card-title mt-0"><%= cite_obj.title %> </h5>
+                    <% var author=author_list(cite_obj.author); %>
+                    <% var pub=pub_list(cite_obj,item.conference) %>
+                    <p class="card-text "><%- author.concat('</br>',pub) %>  </p>
+                    
+                  </div>
+                  <div class="card-footer px-4 border-0 bg-transparent">
+                    <% if(item.paper!=null&&item.paper!=''){ %> 
+                        <a href="<%= item.paper %>" class="card-link"><i class="fa fa-file-pdf" aria-hidden="true"></i> paper</a>
+                    <% } %> 
+                    <% if(item.video!=null&&item.video!=''){ %> 
+                        <a href="<%= item.video %>" class="card-link"> <i class="fab fa-youtube-square" aria-hidden="true"></i> video</a>
+                    <% } %> 
+                    <% if(item.external_link!=null&&item.external_link!=''){ %> 
+                        <a href="<%= item.external_link %>" class="card-link"> <i class="fa fa-external-link-alt" aria-hidden="true"></i> data</a>
+                    <% } %> 
+                  </div>
+                </div>
+              </div>
+          </div>
+    <% }else{ %>  
+    <div class="card mb-3 border-top-0 border-right-0 border-left-0 pb-3 rounded-0" >
+        <div class="card-body  border-0 pl-0  my-0  py-0">
+            <p><%- citation(item.bibtex,item.view) %> 
+             <% if(item.paper!=null&&item.paper!=''){ %> 
+                <a href="<%= item.paper %>" class="card-link"><i class="fa fa-file-pdf" aria-hidden="true"></i> paper</a>
+            <% } %> 
+            <% if(item.video!=null&&item.video!=''){ %> 
+                <a href="<%= item.video %>" class="card-link"> <i class="fab fa-youtube-square" aria-hidden="true"></i> video</a>
+            <% } %> 
+            <% if(item.external_link!=null&&item.external_link!=''){ %> 
+                <a href="<%= item.external_link %>" class="card-link"> <i class="fa fa-external-link-alt" aria-hidden="true"></i> data</a>
+            <% } %> </p>
+        </div>
+      </div>
+    <% } %> 
+<% } %>  

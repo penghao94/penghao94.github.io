@@ -1,0 +1,9 @@
+
+<div class= "row mt-0 md-3">
+    <div class="col-md-12 ">
+        <p><%- post.content %></p> 
+         <% if(post.type=='publication'){ %>
+            <%- partial('_partial/publication', null, {cache: !config.relative_link}) %>
+        <% } %>
+    </div>
+</div>
