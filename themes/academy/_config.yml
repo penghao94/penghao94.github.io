@@ -25,7 +25,7 @@ loading_bg:
 social:
   enable: true
 social_links:
-  github: {icon: fab fa-github,url: https://github.com/swannyPeng, text: https://github.com/swannyPeng}
+  github: {icon: fab fa-github,url: https://github.com/penghao94, text: https://github.com/penghao94}
   mail: {icon: fas fa-envelope,text: penghao@mail.sdu.edu.cn}
 
 # CV download link
